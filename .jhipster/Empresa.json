@@ -1,0 +1,44 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "razaoSocial",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "nome",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "dataCadastro",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "dataUltimaAtualizacao",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "cnpj",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "status",
+            "fieldType": "StatusEmpresaEnum",
+            "fieldValues": "CRIADA,CANCELADA,SUSPENSA,EXCLUIDA"
+        },
+        {
+            "fieldName": "quantidadeAcoes",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "valorInicial",
+            "fieldType": "Double"
+        }
+    ],
+    "changelogDate": "20171005021923",
+    "entityTableName": "empresa",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no"
+}

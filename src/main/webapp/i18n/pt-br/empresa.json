@@ -1,0 +1,29 @@
+{
+    "bcbApp": {
+        "empresa" : {
+            "home": {
+                "title": "Empresas",
+                "createLabel": "Criar novo Empresa",
+                "createOrEditLabel": "Criar ou editar Empresa",
+                "search": "Pesquisar por Empresa"
+            },
+            "created": "Um novo Empresa foi criado com o identificador {{ param }}",
+            "updated": "Um Empresa foi atualizado com o identificador {{ param }}",
+            "deleted": "Um Empresa foi deletado com o identificador {{ param }}",
+            "delete": {
+                "question": "Tem certeza de que deseja excluir Empresa {{ id }}?"
+            },
+            "detail": {
+                "title": "Empresa"
+            },
+            "razaoSocial": "Razao Social",
+            "nome": "Nome",
+            "dataCadastro": "Data Cadastro",
+            "dataUltimaAtualizacao": "Data Ultima Atualizacao",
+            "cnpj": "Cnpj",
+            "status": "Status",
+            "quantidadeAcoes": "Quantidade Acoes",
+            "valorInicial": "Valor Inicial"
+        }
+    }
+}

@@ -1,0 +1,48 @@
+entity Ordem {
+	tipo String,
+    valorOrdem Double,
+    quantidade Long,
+    dataOrdem ZonedDateTime,
+    status StatusOrdemEnum
+}
+
+enum TipoOrdermEnum {
+	COMPRA, VENDA
+}
+
+enum StatusOrdemEnum {
+    CRIADO, EXECUTADO, CANCELADO, SUSPENSO
+}
+
+entity Custodia {
+	status StatusCustodiaEmpresa,
+    dataAbertura ZonedDateTime,
+    dataFechamento ZonedDateTime,
+    quantidadeTotal Long,
+    valorTotal Double    
+}
+
+enum StatusCustodiaEmpresa {
+	ABERTA, FECHADA, CANCELADA
+}
+
+entity Empresa {
+	razaoSocial String,
+    nome String,
+    dataCadastro LocalDate, // data em que a empresa foi cadastrada na plataforma
+    dataUltimaAtualizacao LocalDate,
+    cnpj Long,
+    status StatusEmpresaEnum,
+    quantidadeAcoes Long,
+    valorInicial Double
+}
+
+enum StatusEmpresaEnum {
+	CRIADA, CANCELADA, SUSPENSA, EXCLUIDA
+}
+
+relationship OneToMany {
+	Custodia{ordem} to Ordem
+}
+
+

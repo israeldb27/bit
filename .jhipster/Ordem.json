@@ -1,0 +1,39 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "custodia",
+            "otherEntityName": "custodia",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "tipo",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "valorOrdem",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "quantidade",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "dataOrdem",
+            "fieldType": "ZonedDateTime"
+        },
+        {
+            "fieldName": "status",
+            "fieldType": "StatusOrdemEnum",
+            "fieldValues": "CRIADO,EXECUTADO,CANCELADO,SUSPENSO"
+        }
+    ],
+    "changelogDate": "20171005021921",
+    "entityTableName": "ordem",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no"
+}

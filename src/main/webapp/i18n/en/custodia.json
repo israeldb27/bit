@@ -1,0 +1,27 @@
+{
+    "bcbApp": {
+        "custodia" : {
+            "home": {
+                "title": "Custodias",
+                "createLabel": "Create a new Custodia",
+                "createOrEditLabel": "Create or edit a Custodia",
+                "search": "Search for Custodia"
+            },
+            "created": "A new Custodia is created with identifier {{ param }}",
+            "updated": "A Custodia is updated with identifier {{ param }}",
+            "deleted": "A Custodia is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Custodia {{ id }}?"
+            },
+            "detail": {
+                "title": "Custodia"
+            },
+            "status": "Status",
+            "dataAbertura": "Data Abertura",
+            "dataFechamento": "Data Fechamento",
+            "quantidadeTotal": "Quantidade Total",
+            "valorTotal": "Valor Total",
+            "ordem": "Ordem"
+        }
+    }
+}

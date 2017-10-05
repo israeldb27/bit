@@ -1,0 +1,53 @@
+
+<div *ngIf="empresa">
+    <h2><span jhiTranslate="bcbApp.empresa.detail.title">Empresa</span> {{empresa.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="bcbApp.empresa.razaoSocial">Razao Social</span></dt>
+        <dd>
+            <span>{{empresa.razaoSocial}}</span>
+        </dd>
+        <dt><span jhiTranslate="bcbApp.empresa.nome">Nome</span></dt>
+        <dd>
+            <span>{{empresa.nome}}</span>
+        </dd>
+        <dt><span jhiTranslate="bcbApp.empresa.dataCadastro">Data Cadastro</span></dt>
+        <dd>
+            <span>{{empresa.dataCadastro | date:'mediumDate'}}</span>
+        </dd>
+        <dt><span jhiTranslate="bcbApp.empresa.dataUltimaAtualizacao">Data Ultima Atualizacao</span></dt>
+        <dd>
+            <span>{{empresa.dataUltimaAtualizacao | date:'mediumDate'}}</span>
+        </dd>
+        <dt><span jhiTranslate="bcbApp.empresa.cnpj">Cnpj</span></dt>
+        <dd>
+            <span>{{empresa.cnpj}}</span>
+        </dd>
+        <dt><span jhiTranslate="bcbApp.empresa.status">Status</span></dt>
+        <dd>
+            <span jhiTranslate="{{'bcbApp.StatusEmpresaEnum.' + empresa.status}}">{{empresa.status}}</span>
+        </dd>
+        <dt><span jhiTranslate="bcbApp.empresa.quantidadeAcoes">Quantidade Acoes</span></dt>
+        <dd>
+            <span>{{empresa.quantidadeAcoes}}</span>
+        </dd>
+        <dt><span jhiTranslate="bcbApp.empresa.valorInicial">Valor Inicial</span></dt>
+        <dd>
+            <span>{{empresa.valorInicial}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'empresa/'+ empresa.id + '/edit'} }]"
+            replaceUrl="true"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+    </button>
+</div>

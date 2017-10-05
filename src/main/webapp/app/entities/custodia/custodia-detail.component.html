@@ -1,0 +1,41 @@
+
+<div *ngIf="custodia">
+    <h2><span jhiTranslate="bcbApp.custodia.detail.title">Custodia</span> {{custodia.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="bcbApp.custodia.status">Status</span></dt>
+        <dd>
+            <span jhiTranslate="{{'bcbApp.StatusCustodiaEmpresa.' + custodia.status}}">{{custodia.status}}</span>
+        </dd>
+        <dt><span jhiTranslate="bcbApp.custodia.dataAbertura">Data Abertura</span></dt>
+        <dd>
+            <span>{{custodia.dataAbertura | date:'medium'}}</span>
+        </dd>
+        <dt><span jhiTranslate="bcbApp.custodia.dataFechamento">Data Fechamento</span></dt>
+        <dd>
+            <span>{{custodia.dataFechamento | date:'medium'}}</span>
+        </dd>
+        <dt><span jhiTranslate="bcbApp.custodia.quantidadeTotal">Quantidade Total</span></dt>
+        <dd>
+            <span>{{custodia.quantidadeTotal}}</span>
+        </dd>
+        <dt><span jhiTranslate="bcbApp.custodia.valorTotal">Valor Total</span></dt>
+        <dd>
+            <span>{{custodia.valorTotal}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'custodia/'+ custodia.id + '/edit'} }]"
+            replaceUrl="true"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+    </button>
+</div>

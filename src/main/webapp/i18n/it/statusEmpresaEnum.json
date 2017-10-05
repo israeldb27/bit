@@ -1,0 +1,11 @@
+{
+    "bcbApp": {
+        "StatusEmpresaEnum" : {
+            "null": "",
+            "CRIADA": "CRIADA",
+            "CANCELADA": "CANCELADA",
+            "SUSPENSA": "SUSPENSA",
+            "EXCLUIDA": "EXCLUIDA"
+        }
+    }
+}

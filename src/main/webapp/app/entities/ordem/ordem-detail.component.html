@@ -1,0 +1,47 @@
+
+<div *ngIf="ordem">
+    <h2><span jhiTranslate="bcbApp.ordem.detail.title">Ordem</span> {{ordem.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="bcbApp.ordem.tipo">Tipo</span></dt>
+        <dd>
+            <span>{{ordem.tipo}}</span>
+        </dd>
+        <dt><span jhiTranslate="bcbApp.ordem.valorOrdem">Valor Ordem</span></dt>
+        <dd>
+            <span>{{ordem.valorOrdem}}</span>
+        </dd>
+        <dt><span jhiTranslate="bcbApp.ordem.quantidade">Quantidade</span></dt>
+        <dd>
+            <span>{{ordem.quantidade}}</span>
+        </dd>
+        <dt><span jhiTranslate="bcbApp.ordem.dataOrdem">Data Ordem</span></dt>
+        <dd>
+            <span>{{ordem.dataOrdem | date:'medium'}}</span>
+        </dd>
+        <dt><span jhiTranslate="bcbApp.ordem.status">Status</span></dt>
+        <dd>
+            <span jhiTranslate="{{'bcbApp.StatusOrdemEnum.' + ordem.status}}">{{ordem.status}}</span>
+        </dd>
+        <dt><span jhiTranslate="bcbApp.ordem.custodia">Custodia</span></dt>
+        <dd>
+            <div *ngIf="ordem.custodia">
+                <a [routerLink]="['/custodia', ordem.custodia?.id]">{{ordem.custodia?.id}}</a>
+            </div>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'ordem/'+ ordem.id + '/edit'} }]"
+            replaceUrl="true"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+    </button>
+</div>

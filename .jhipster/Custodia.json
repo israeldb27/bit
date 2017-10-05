@@ -1,0 +1,39 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "ordem",
+            "otherEntityName": "ordem",
+            "otherEntityRelationshipName": "custodia"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "status",
+            "fieldType": "StatusCustodiaEmpresa",
+            "fieldValues": "ABERTA,FECHADA,CANCELADA"
+        },
+        {
+            "fieldName": "dataAbertura",
+            "fieldType": "ZonedDateTime"
+        },
+        {
+            "fieldName": "dataFechamento",
+            "fieldType": "ZonedDateTime"
+        },
+        {
+            "fieldName": "quantidadeTotal",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "valorTotal",
+            "fieldType": "Double"
+        }
+    ],
+    "changelogDate": "20171005021922",
+    "entityTableName": "custodia",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no"
+}

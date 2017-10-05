@@ -1,0 +1,10 @@
+{
+    "bcbApp": {
+        "StatusCustodiaEmpresa" : {
+            "null": "",
+            "ABERTA": "ABERTA",
+            "FECHADA": "FECHADA",
+            "CANCELADA": "CANCELADA"
+        }
+    }
+}

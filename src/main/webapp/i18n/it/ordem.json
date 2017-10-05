@@ -1,0 +1,27 @@
+{
+    "bcbApp": {
+        "ordem" : {
+            "home": {
+                "title": "Ordems",
+                "createLabel": "Genera un nuovo Ordem",
+                "createOrEditLabel": "Genera o modifica un Ordem",
+                "search": "Cerca Ordem"
+            },
+            "created": "&Egrave; stato generato un nuovo Ordem con identificatore {{ param }}",
+            "updated": "&Egrave; stato aggiornato Ordem identificato da {{ param }}",
+            "deleted": "&Egrave; stato eliminato Ordem con identificatore {{ param }}",
+            "delete": {
+                "question": "Sei sicuro di volere eliminare Ordem {{ id }}?"
+            },
+            "detail": {
+                "title": "Ordem"
+            },
+            "tipo": "Tipo",
+            "valorOrdem": "Valor Ordem",
+            "quantidade": "Quantidade",
+            "dataOrdem": "Data Ordem",
+            "status": "Status",
+            "custodia": "Custodia"
+        }
+    }
+}

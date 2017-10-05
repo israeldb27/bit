@@ -1,0 +1,11 @@
+{
+    "bcbApp": {
+        "StatusOrdemEnum" : {
+            "null": "",
+            "CRIADO": "CRIADO",
+            "EXECUTADO": "EXECUTADO",
+            "CANCELADO": "CANCELADO",
+            "SUSPENSO": "SUSPENSO"
+        }
+    }
+}

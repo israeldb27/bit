@@ -1,0 +1,79 @@
+<form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+
+    <div class="modal-header">
+        <h4 class="modal-title" id="myEmpresaLabel" jhiTranslate="bcbApp.empresa.home.createOrEditLabel">Create or edit a Empresa</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                (click)="clear()">&times;</button>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" [hidden]="!empresa.id">
+            <label for="id" jhiTranslate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                   [(ngModel)]="empresa.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="bcbApp.empresa.razaoSocial" for="field_razaoSocial">Razao Social</label>
+            <input type="text" class="form-control" name="razaoSocial" id="field_razaoSocial"
+                [(ngModel)]="empresa.razaoSocial"  />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="bcbApp.empresa.nome" for="field_nome">Nome</label>
+            <input type="text" class="form-control" name="nome" id="field_nome"
+                [(ngModel)]="empresa.nome"  />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="bcbApp.empresa.dataCadastro" for="field_dataCadastro">Data Cadastro</label>
+            <div class="input-group">
+                <input id="field_dataCadastro" type="text" class="form-control" name="dataCadastro" ngbDatepicker  #dataCadastroDp="ngbDatepicker" [(ngModel)]="empresa.dataCadastro"
+                />
+                <span class="input-group-btn">
+                    <button type="button" class="btn btn-secondary" (click)="dataCadastroDp.toggle()"><i class="fa fa-calendar"></i></button>
+                </span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="bcbApp.empresa.dataUltimaAtualizacao" for="field_dataUltimaAtualizacao">Data Ultima Atualizacao</label>
+            <div class="input-group">
+                <input id="field_dataUltimaAtualizacao" type="text" class="form-control" name="dataUltimaAtualizacao" ngbDatepicker  #dataUltimaAtualizacaoDp="ngbDatepicker" [(ngModel)]="empresa.dataUltimaAtualizacao"
+                />
+                <span class="input-group-btn">
+                    <button type="button" class="btn btn-secondary" (click)="dataUltimaAtualizacaoDp.toggle()"><i class="fa fa-calendar"></i></button>
+                </span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="bcbApp.empresa.cnpj" for="field_cnpj">Cnpj</label>
+            <input type="number" class="form-control" name="cnpj" id="field_cnpj"
+                [(ngModel)]="empresa.cnpj"  />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="bcbApp.empresa.status" for="field_status">Status</label>
+            <select class="form-control" name="status" [(ngModel)]="empresa.status" id="field_status" >
+                <option value="CRIADA">{{'bcbApp.StatusEmpresaEnum.CRIADA' | translate}}</option>
+                <option value="CANCELADA">{{'bcbApp.StatusEmpresaEnum.CANCELADA' | translate}}</option>
+                <option value="SUSPENSA">{{'bcbApp.StatusEmpresaEnum.SUSPENSA' | translate}}</option>
+                <option value="EXCLUIDA">{{'bcbApp.StatusEmpresaEnum.EXCLUIDA' | translate}}</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="bcbApp.empresa.quantidadeAcoes" for="field_quantidadeAcoes">Quantidade Acoes</label>
+            <input type="number" class="form-control" name="quantidadeAcoes" id="field_quantidadeAcoes"
+                [(ngModel)]="empresa.quantidadeAcoes"  />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="bcbApp.empresa.valorInicial" for="field_valorInicial">Valor Inicial</label>
+            <input type="number" class="form-control" name="valorInicial" id="field_valorInicial"
+                [(ngModel)]="empresa.valorInicial"  />
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="clear()">
+            <span class="fa fa-ban"></span>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+            <span class="fa fa-save"></span>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>
