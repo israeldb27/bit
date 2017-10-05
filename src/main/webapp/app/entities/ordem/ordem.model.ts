@@ -1,5 +1,10 @@
 import { BaseEntity } from './../../shared';
 
+export const enum TipoOrdermEnum {
+    'COMPRA',
+    'VENDA'
+}
+
 export const enum StatusOrdemEnum {
     'CRIADO',
     'EXECUTADO',
@@ -10,7 +15,7 @@ export const enum StatusOrdemEnum {
 export class Ordem implements BaseEntity {
     constructor(
         public id?: number,
-        public tipo?: string,
+        public tipo?: TipoOrdermEnum,
         public valorOrdem?: number,
         public quantidade?: number,
         public dataOrdem?: any,

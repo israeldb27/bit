@@ -11,7 +11,8 @@
     "fields": [
         {
             "fieldName": "tipo",
-            "fieldType": "String"
+            "fieldType": "TipoOrdermEnum",
+            "fieldValues": "COMPRA,VENDA"
         },
         {
             "fieldName": "valorOrdem",

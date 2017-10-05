@@ -9,6 +9,8 @@ import java.io.Serializable;
 import java.time.ZonedDateTime;
 import java.util.Objects;
 
+import com.application.domain.enumeration.TipoOrdermEnum;
+
 import com.application.domain.enumeration.StatusOrdemEnum;
 
 /**
@@ -27,8 +29,9 @@ public class Ordem implements Serializable {
     @SequenceGenerator(name = "sequenceGenerator")
     private Long id;
 
+    @Enumerated(EnumType.STRING)
     @Column(name = "tipo")
-    private String tipo;
+    private TipoOrdermEnum tipo;
 
     @Column(name = "valor_ordem")
     private Double valorOrdem;
@@ -55,16 +58,16 @@ public class Ordem implements Serializable {
         this.id = id;
     }
 
-    public String getTipo() {
+    public TipoOrdermEnum getTipo() {
         return tipo;
     }
 
-    public Ordem tipo(String tipo) {
+    public Ordem tipo(TipoOrdermEnum tipo) {
         this.tipo = tipo;
         return this;
     }
 
-    public void setTipo(String tipo) {
+    public void setTipo(TipoOrdermEnum tipo) {
         this.tipo = tipo;
     }
 

@@ -34,6 +34,7 @@ import static org.hamcrest.Matchers.hasItem;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
+import com.application.domain.enumeration.TipoOrdermEnum;
 import com.application.domain.enumeration.StatusOrdemEnum;
 /**
  * Test class for the OrdemResource REST controller.
@@ -44,8 +45,8 @@ import com.application.domain.enumeration.StatusOrdemEnum;
 @SpringBootTest(classes = BcbApp.class)
 public class OrdemResourceIntTest {
 
-    private static final String DEFAULT_TIPO = "AAAAAAAAAA";
-    private static final String UPDATED_TIPO = "BBBBBBBBBB";
+    private static final TipoOrdermEnum DEFAULT_TIPO = TipoOrdermEnum.COMPRA;
+    private static final TipoOrdermEnum UPDATED_TIPO = TipoOrdermEnum.VENDA;
 
     private static final Double DEFAULT_VALOR_ORDEM = 1D;
     private static final Double UPDATED_VALOR_ORDEM = 2D;

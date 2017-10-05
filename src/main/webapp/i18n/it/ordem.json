@@ -2,7 +2,7 @@
     "bcbApp": {
         "ordem" : {
             "home": {
-                "title": "Ordems",
+                "title": "Ordens",
                 "createLabel": "Genera un nuovo Ordem",
                 "createOrEditLabel": "Genera o modifica un Ordem",
                 "search": "Cerca Ordem"

@@ -42,7 +42,7 @@
             <tbody>
             <tr *ngFor="let ordem of ordems ;trackBy: trackId">
                 <td><a [routerLink]="['../ordem', ordem.id ]">{{ordem.id}}</a></td>
-                <td>{{ordem.tipo}}</td>
+                <td jhiTranslate="{{'bcbApp.TipoOrdermEnum.' + ordem.tipo}}">{{ordem.tipo}}</td>
                 <td>{{ordem.valorOrdem}}</td>
                 <td>{{ordem.quantidade}}</td>
                 <td>{{ordem.dataOrdem | date:'medium'}}</td>

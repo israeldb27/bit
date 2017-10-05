@@ -35,8 +35,7 @@ describe('Ordem e2e test', () => {
 
     it('should create and save Ordems', () => {
         ordemComponentsPage.clickOnCreateButton();
-        ordemDialogPage.setTipoInput('tipo');
-        expect(ordemDialogPage.getTipoInput()).toMatch('tipo');
+        ordemDialogPage.tipoSelectLastOption();
         ordemDialogPage.setValorOrdemInput('5');
         expect(ordemDialogPage.getValorOrdemInput()).toMatch('5');
         ordemDialogPage.setQuantidadeInput('5');
@@ -71,7 +70,7 @@ export class OrdemDialogPage {
     modalTitle = element(by.css('h4#myOrdemLabel'));
     saveButton = element(by.css('.modal-footer .btn.btn-primary'));
     closeButton = element(by.css('button.close'));
-    tipoInput = element(by.css('input#field_tipo'));
+    tipoSelect = element(by.css('select#field_tipo'));
     valorOrdemInput = element(by.css('input#field_valorOrdem'));
     quantidadeInput = element(by.css('input#field_quantidade'));
     dataOrdemInput = element(by.css('input#field_dataOrdem'));
@@ -82,14 +81,17 @@ export class OrdemDialogPage {
         return this.modalTitle.getAttribute('jhiTranslate');
     }
 
-    setTipoInput = function (tipo) {
-        this.tipoInput.sendKeys(tipo);
+    setTipoSelect = function (tipo) {
+        this.tipoSelect.sendKeys(tipo);
     }
 
-    getTipoInput = function () {
-        return this.tipoInput.getAttribute('value');
+    getTipoSelect = function () {
+        return this.tipoSelect.element(by.css('option:checked')).getText();
     }
 
+    tipoSelectLastOption = function () {
+        this.tipoSelect.all(by.tagName('option')).last().click();
+    }
     setValorOrdemInput = function (valorOrdem) {
         this.valorOrdemInput.sendKeys(valorOrdem);
     }

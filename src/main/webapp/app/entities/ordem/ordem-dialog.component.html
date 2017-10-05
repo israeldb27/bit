@@ -14,8 +14,10 @@
         </div>
         <div class="form-group">
             <label class="form-control-label" jhiTranslate="bcbApp.ordem.tipo" for="field_tipo">Tipo</label>
-            <input type="text" class="form-control" name="tipo" id="field_tipo"
-                [(ngModel)]="ordem.tipo"  />
+            <select class="form-control" name="tipo" [(ngModel)]="ordem.tipo" id="field_tipo" >
+                <option value="COMPRA">{{'bcbApp.TipoOrdermEnum.COMPRA' | translate}}</option>
+                <option value="VENDA">{{'bcbApp.TipoOrdermEnum.VENDA' | translate}}</option>
+            </select>
         </div>
         <div class="form-group">
             <label class="form-control-label" jhiTranslate="bcbApp.ordem.valorOrdem" for="field_valorOrdem">Valor Ordem</label>

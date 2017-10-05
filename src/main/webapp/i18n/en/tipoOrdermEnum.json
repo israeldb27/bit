@@ -1,0 +1,9 @@
+{
+    "bcbApp": {
+        "TipoOrdermEnum" : {
+            "null": "",
+            "COMPRA": "COMPRA",
+            "VENDA": "VENDA"
+        }
+    }
+}

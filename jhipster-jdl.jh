@@ -1,5 +1,5 @@
 entity Ordem {
-	tipo String,
+	tipo TipoOrdermEnum,
     valorOrdem Double,
     quantidade Long,
     dataOrdem ZonedDateTime,
